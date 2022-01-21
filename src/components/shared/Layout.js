@@ -10,8 +10,9 @@ function Layout({children}){
             <Menu />
             <div className={styles.contents}>
                 {children}
-             </div>
+            </div>
         </div>
+       
     </div>
     )
 }
