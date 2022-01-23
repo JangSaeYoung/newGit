@@ -6,11 +6,13 @@ import { BsGrid3X3Gap } from "react-icons/bs";
 import { HiOutlineDotsVertical } from 'react-icons/hi';
 
 
-function Header(){
+function Header({onClickMenu}){
+
+
     return(
     <div className ={styles.header}>
         <div className ={styles.tab}>
-            <FiMenu className = {styles.icon}/>
+            <FiMenu className = {styles.icon} onClick={onClickMenu}/>
             <img src= {youtube_logo} alt="logo" className ={styles.logo} />
         </div>
         <div className={styles['center-tab']}>
