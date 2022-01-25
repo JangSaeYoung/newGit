@@ -4,28 +4,29 @@ import { TiHome } from 'react-icons/ti';
 import { FaRegCompass } from 'react-icons/fa';
 import { MdSubscriptions } from 'react-icons/md';
 
-function Menu({activeMenu}) {
-  console.log('현재 활성화된 메뉴 : ', activeMenu);
+function Menu({ activeMenu }) {
   return (
     <div className={styles.menu}>
-      <Link to="/" 
+      <Link
+        to="/"
         className={activeMenu === 'home' ? styles.focused : styles.link}
-        >
-        <TiHome className={styles.icon} />홈
+      >
+        <TiHome className={styles.icon} />
+        <div className={styles.text}>홈</div>
       </Link>
       <Link
         to="/explore"
         className={activeMenu === 'explore' ? styles.focused : styles.link}
       >
         <FaRegCompass className={styles.icon} />
-        탐색
+        <div className={styles.text}>탐색</div>
       </Link>
       <Link
         to="/subscription"
         className={activeMenu === 'subscription' ? styles.focused : styles.link}
       >
         <MdSubscriptions className={styles.icon} />
-        구독
+        <div className={styles.text}>구독</div>
       </Link>
     </div>
   );
