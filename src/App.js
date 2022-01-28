@@ -1,6 +1,4 @@
-// import './App.css';
-import styles from './App.module.css';
-import React, {useState} from 'react';
+
 import { Route, Routes } from 'react-router-dom';
 import Assignment from './pages/Assignment';
 import Home from './pages/Home';
