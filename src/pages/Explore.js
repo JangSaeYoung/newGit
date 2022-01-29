@@ -6,13 +6,9 @@ import React, { useState } from 'react';
 import styles from './Explore.module.css';
 
 
-
-
 function Explore() {
-  
   const [filter,setFilter] = useState('')
   const list = ['전체','BTS','LISA','아이폰']
-
 
   function category(e){
     if(e.target.innerHTML==='전체'){
@@ -21,7 +17,8 @@ function Explore() {
       setFilter(e.target.innerHTML)
     }
   }
-  
+
+
   return (
     <Layout activeMenu="explore">
       <ul className={styles.category}>
@@ -33,11 +30,16 @@ function Explore() {
             ))}
         </ul>
       <ContentsLayout>
-        {youtubeData['data'].filter((data)=>data.title.includes(filter)).map(function (data, index) {
+        {youtubeData['data'].filter((data)=>data.title.includes(filter)).map(function(data, index) {
           return <ExploreCard key={`explore-card-${index}`} data={data} />;
         })}
       </ContentsLayout>
     </Layout>
   );
 }
+
 export default Explore;
+
+
+
+

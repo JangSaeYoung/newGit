@@ -5,13 +5,14 @@ import 'moment/locale/ko';
 import { AiFillCodeSandboxCircle } from 'react-icons/ai';
 
 
+
 //과제
 // from함수를 상요해 업로드 시간과 특정 시간과의 차이를 리턴하는 함수 만들기 
 function ProcessViewCount(viewCount){
     if(viewCount<1000){
         return `조회수 ${viewCount}회`;
     }else if(viewCount<10000){
-        return `조회수 ${(viewCount /1000).toFixed(1)}천회`;
+        return `조회수 ${(viewCount / 1000).toFixed(1)}천회`;
     }else if(viewCount<100000){
         return `조회수 ${(viewCount / 10000).toFixed(1)}만회`;
     }else if(viewCount<100000000){
