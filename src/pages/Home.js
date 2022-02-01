@@ -31,14 +31,15 @@ function Home(){
   }
 
   return(
-    <Layout activeMenu="home">
-      <div className={styles.header}>{target.map(mapFunc)}</div>
+    <Layout activeMenu="home" key={filter} >
+      <div className= {styles.header}>{target.map(mapFunc)}</div>
       <div className={styles.container}>
-        <div className={styles.grid}>{youtubeData['data'].filter(filterFunc).map(HomeCard)}</div>
+        <div className={styles.grid} > {youtubeData['data'].filter(filterFunc).map(HomeCard)}</div>
       </div>
     </Layout>
   );
 }
 
-
 export default Home;
+
+

@@ -1,15 +1,17 @@
-import moment from 'moment';
 import 'moment/locale/ko';
 import { ProcessUploadDate, ProcessViewCount } from '../../utils';
 import styles from './HomeCard.module.css';
 
 function HomeCard(data, index) {
+
     return (
+        <div>
         <a
         href={`https://www.youtube.com/watch?v=${data.id}`}
         key={`home-card-${index}`}
         className={styles.card}
         >
+        </a>
         <img 
         className={styles.thumbnail}
         src={data.thumbnail}
@@ -36,8 +38,9 @@ function HomeCard(data, index) {
             </div>
         </div>
         </div>
-        </a>
+        </div>
     );
 }
 
 export default HomeCard;
+

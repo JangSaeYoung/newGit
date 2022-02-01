@@ -7,7 +7,7 @@ function HorizontalCard({ data }) {
   return (
     <a href={`https://www.youtube.com/watch?v=${data.id}`}>
       <div className={styles.card}>
-        <img
+        <img  
           className={styles.thumbnail}
           src={data.thumbnail}
           alt={`${data.title}의 썸네일`}
@@ -29,6 +29,7 @@ function HorizontalCard({ data }) {
         </div>
       </div>
     </a>
+    
   );
 }
 export default HorizontalCard;
